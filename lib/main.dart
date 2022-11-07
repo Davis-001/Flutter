@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+ const MyHomePage({super.key, required this.title});
 
   
 
@@ -40,11 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(
-        title:const Text("Olá Flutter"),
-        centerTitle: true,
-        
-      ),
+      
       body: Center(
         
         child: Padding(
@@ -53,18 +49,19 @@ class _MyHomePageState extends State<MyHomePage> {
             
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextFormField(decoration: const InputDecoration(hintText: "Usuário",),),
-              TextFormField(decoration: const InputDecoration(hintText:"Senha" ,),),
+              const Icon(Icons.account_circle,size:100,color: Colors.blueGrey, ),
+              TextFormField(decoration: const InputDecoration(hintText: "Usuário",prefixIcon:Icon(Icons.person
+               )),),
+              TextFormField(obscureText: true,decoration: const InputDecoration(hintText:"Senha" ,prefixIcon:Icon(Icons.key,
+               color: Colors.grey,),suffixIcon: Icon(Icons.visibility,color: Colors.blueGrey,) ),),
+              const SizedBox(width:20, height:32,),
+              ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(backgroundColor: Colors.purple,fixedSize: const Size(300,70 )), child: Text("Login".toUpperCase(), style:const TextStyle(fontSize:20,fontWeight:FontWeight.bold),))
 
             ],
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), 
+       
     );
   }
 }
