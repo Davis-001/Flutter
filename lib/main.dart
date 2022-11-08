@@ -49,13 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
             
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Icon(Icons.account_circle,size:100,color: Colors.blueGrey, ),
-              TextFormField(decoration: const InputDecoration(hintText: "Usuário",prefixIcon:Icon(Icons.person
+              const Icon(Icons.account_circle,size:100,color: Colors.blue, ),
+              const SizedBox(width:20, height:50,),
+              TextFormField(decoration: const InputDecoration(hintText: "Usuário",prefixIcon:Icon(Icons.person,color: Colors.blueAccent,
                )),),
+              
               TextFormField(obscureText: true,decoration: const InputDecoration(hintText:"Senha" ,prefixIcon:Icon(Icons.key,
-               color: Colors.grey,),suffixIcon: Icon(Icons.visibility,color: Colors.blueGrey,) ),),
+               color: Colors.blue,),suffixIcon: Icon(Icons.visibility,color: Colors.blue,) ),),
               const SizedBox(width:20, height:32,),
-              ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(backgroundColor: Colors.purple,fixedSize: const Size(300,70 )), child: Text("Login".toUpperCase(), style:const TextStyle(fontSize:20,fontWeight:FontWeight.bold),))
+              ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(backgroundColor: Colors.purple,fixedSize: const Size(450,70 )), child: Text("Login".toUpperCase(), style:const TextStyle(fontSize:20,fontWeight:FontWeight.bold),))
 
             ],
           ),
